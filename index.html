@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Mania</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <!-- Navigation Bar -->
+   <header>
+    <nav>
+        <h1>Movie Mania</h1>
+        <input type="text" id="search-bar" placeholder="Search for movies...">
+        <div id="autocomplete-results"></div>
+        <ul>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Watchlist</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- Main Content: Trending Movies -->
+    <main>
+        <section id="trending-movies">
+            <h2>Trending Movies</h2>
+            <div id="movie-grid"></div>
+        </section>
+
+        <!-- Movie Details Modal -->
+        <div id="movie-details" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="movie-title"></h2>
+                <img id="movie-poster" alt="Movie Poster">
+                <p id="movie-synopsis"></p>
+                <div id="cast-info"></div>
+                <button id="add-to-watchlist">Add to Watchlist</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
