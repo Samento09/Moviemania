@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Mania</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <!-- Navigation Bar -->
-   <header>
-    <nav>
+    <header>
         <h1>Movie Mania</h1>
-        <input type="text" id="search-bar" placeholder="Search for movies...">
-        <div id="autocomplete-results"></div>
-        <ul>
-            <li><a href="#">Trending</a></li>
-            <li><a href="#">Watchlist</a></li>
-        </ul>
-    </nav>
-</header>
-    <!-- Main Content: Trending Movies -->
-    <main>
-        <section id="trending-movies">
-            <h2>Trending Movies</h2>
-            <div id="movie-grid"></div>
-        </section>
+        <input type="text" id="search-bar" placeholder="Search for a movie...">
+    </header>
 
-        <!-- Movie Details Modal -->
-        <div id="movie-details" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="movie-title"></h2>
-                <img id="movie-poster" alt="Movie Poster">
-                <p id="movie-synopsis"></p>
-                <div id="cast-info"></div>
-                <button id="add-to-watchlist">Add to Watchlist</button>
-            </div>
+    <section id="categories-container">
+        <h2>Categories</h2>
+        <div id="category-buttons">
+
         </div>
-    </main>
+
+    </section>
+
+    <section id="trending">
+        <h2>Trending Movies</h2>
+        <div id="trending-list"></div>
+
+    </section>    
+
+    <section id="watchlist">
+        <h2>Your Watchlist</h2>
+        <ul id="watchlist-items"></ul>
+    </section>
+
+    <!-- Movie Details Modal -->
+    <div id="movie-details-modal" class="modal">
+        <div class="modal-content">
+            <!-- Movie details will be rendered here -->
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <div id="movie-details"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
